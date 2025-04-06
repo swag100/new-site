@@ -1,0 +1,29 @@
+doctype html
+html
+   head
+      title I am the webpage Title
+   body
+      include ./components/header.pug
+
+      div#content
+         if(user)
+            h1 Hello, #{user.name}
+            p you are #{user.age} years old
+         else 
+            p Sign up NOW
+            include ./components/log.pug
+
+         h1 How to put this in div?
+         p.class It looks like indentation is key!
+
+         p. 
+            this is a BIG paragraph, using a period after the element tag.
+            I think this is all one big paragraph
+            Lalalala
+      
+      div#dynamicvlauestest
+         h1 Greetings from #{name}
+         p=name 
+         a(href=url) GO TO USERS
+      
+      include ./components/footer.pug
